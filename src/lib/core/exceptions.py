@@ -1,0 +1,2 @@
+class CoinNotSupportedException(Exception):
+    pass

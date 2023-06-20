@@ -1,0 +1,39 @@
+[tool.black]
+line-length = 100
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry]
+name = "crypto-address-generator"
+version = "1.0.0"
+description = ""
+authors = ["Przemyslaw Debicki <debickiprzemek@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.88.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+sqlalchemy = "^1.4.44"
+bitcoin = "^1.1.42"
+eth-keys = "^0.4.0"
+eth-hash = {extras = ["pycryptodome"], version = "^0.5.2"}
+python-dotenv = "^1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^22.10.0"
+pylint = "^2.15.7"
+pre-commit = "^2.20.0"
+pytest = "^7.3.2"
+pytest-mock = "^3.11.1"
+httpx = "^0.24.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
