@@ -40,6 +40,8 @@
 
 
 ## 3. Usage <a name="usage"/>
+    Make sure you have set environmental variable PRIVATE_KEY.
+
     Run application:
     ```
     python src/app.py

@@ -1,7 +1,11 @@
 # pylint: disable=redefined-outer-name
+import os
+
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import sessionmaker
+
+os.environ["PRIVATE_KEY"] = "df55e88301145178c6226027713bca34fe1b904141335bbba4562d7702e49586"
 
 from src.app import app as fast_api_app
 from src.lib.core.dependancies import get_db

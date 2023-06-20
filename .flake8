@@ -1,3 +1,5 @@
 [flake8]
 max-line-length = 100
 exclude = .venv
+per-file-ignores =
+    tests/unit/apis/address/routers_test.py:E402
